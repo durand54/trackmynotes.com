@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace TrackMyNotes\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'TrackMyNotes',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        TrackMyNotes\Providers\AppServiceProvider::class,
+        TrackMyNotes\Providers\AuthServiceProvider::class,
+        // TrackMyNotes\Providers\BroadcastServiceProvider::class,
+        TrackMyNotes\Providers\EventServiceProvider::class,
+        TrackMyNotes\Providers\RouteServiceProvider::class,
 
     ],
 

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TrackMyNotes') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -19,6 +19,16 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+    <style>
+        html, body {
+            background-color: #FF504A;
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -36,7 +46,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'TrackMyNotes') }}
                     </a>
                 </div>
 
