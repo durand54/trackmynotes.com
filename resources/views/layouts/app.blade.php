@@ -19,39 +19,7 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    <style>
-        html, body {
-            background-color: #FF504A;
-            color: #fff;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-        }
-        .navbar-default {
-            background-color: #FF504A;
-            color: #fff;
-            border-color: #c7254e;
-        }
-        .navbar-default .navbar-brand {
-            color: #fff;
-        }
 
-        .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-            color: #133d55;
-            background-color: transparent
-        }
-        .navbar-default .navbar-nav > li > a, .navbar-default .navbar-text {
-            color: #FFFFFF;
-        }
-
-        .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-            color: #133d55;
-            background-color: transparent
-        }
-        .form-horizontal .control-label{ color: #2F3133;}
-        .form-horizontal .checkbox { color: #2F3133;}
-    </style>
 </head>
 <body>
     <div id="app">
@@ -71,6 +39,15 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'TrackMyNotes') }}
                     </a>
+                    <ul class="nav navbar-nav navbar-left">
+                        <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        @else
+                            <ul class="nav navbar-nav">
+                                <li><a href="/home">Dashboard</a></li>
+                                <li><a href="{{ route('clients.create') }}">Create New Client</a></li>
+                            </ul>
+                    @endif
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

@@ -81,14 +81,14 @@
                 <div class="title m-b-md">
                     Track My Notes
                 </div>
-
-                <div class="links">
+                <div class="Links">A place to link up your clients with the appropriate rooms and food.</div>
+                <!--<div class="links">
                     <a href="https://laravel.com/docs">Hotels</a>
                     <a href="https://laracasts.com">Clien ts</a>
                     <a href="https://laravel-news.com">Tasks</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                </div>-->
             </div>
         </div>
     </body>

@@ -7,3 +7,60 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.panel-default > .panel-heading{
+  margin: 0; // reset heading margin
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight:600;
+  background-color: #2F3133;
+  color: #fff;
+  border-bottom: 1px solid darken($popover-title-bg, 5%);
+  border-radius: ($border-radius-large - 1) ($border-radius-large - 1) 0 0;
+}
+.jumbotron {
+    background-color: #FF504A;
+    color: #fff;
+    padding-left: 150px;
+    padding-top: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color: #c7254e;
+    padding-bottom: 0px;
+}
+.jumbotron h1{
+  font-size: 35px;
+  color: #fff;
+  font-weight: 400;
+  padding-top: 0px;
+}
+html, body {
+  background-color: #FF504A;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
+}
+.navbar-default {
+  background-color: #FF504A;
+  color: #fff;
+  border-color: #c7254e;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: #133d55;
+  background-color: transparent
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-text {
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: #133d55;
+  background-color: transparent
+}
+.form-horizontal .control-label{ color: #2F3133;}
+.form-horizontal .checkbox { color: #2F3133;}
