@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/libs.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -93,6 +94,9 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/libs.js') }}"></script>
+    @include('flash')
+
 
 </body>
 </html>

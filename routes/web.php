@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get(/**
+ * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+ */
+    '/', function () {
     return view('welcome');
 });
 
@@ -19,3 +22,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::resource('clients','ClientController');
+Route::post('/clients','ClientController@store');
