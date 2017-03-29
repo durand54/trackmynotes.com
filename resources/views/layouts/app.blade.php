@@ -45,7 +45,7 @@
                     @if (Auth::guest())
                         @else
                             <ul class="nav navbar-nav">
-                                <li><a href="/home">Dashboard</a></li>
+                            <li><a href="{{ route('clients.index') }}">Dashboard</a></li>
                                 <li><a href="{{ route('clients.create') }}">Create New Client</a></li>
                             </ul>
                     @endif

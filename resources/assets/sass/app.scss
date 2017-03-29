@@ -71,3 +71,23 @@ html, body {
 }
 .form-horizontal .control-label{ color: #2F3133;}
 .form-horizontal .checkbox { color: #2F3133;}
+a.clients{
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* visited link */
+.clients a:visited {
+  color: #FFFFFF;
+}
+
+/* mouse over link */
+.clients a:hover {
+  color: #FFFFFF;
+}
+
+/* selected link */
+.clients a:active {
+  color: #FFFFFF;
+}

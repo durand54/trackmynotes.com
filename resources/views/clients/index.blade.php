@@ -22,13 +22,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <ul>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <ul style="list-style: none;">
                 @foreach($clients as $client)
-                    <li>{{ $client->propertyName }}</li>
+                    <li><a href="" class="clients">{{ $client->firstName }} {{ $client->lastName }} </a> {{ $client->propertyName }}&nbsp;</li>
                 @endforeach
             </ul>
         </div>
+        <div class="col-md-2"></div>
     </div>
 
 @endsection

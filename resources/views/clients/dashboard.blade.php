@@ -21,4 +21,15 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1"></div>
+        <div class="col-md-8 col-md-offset-1">
+            <ul>
+                @foreach($clients as $client)
+                    <li><a href="">{{ $client->firstName }} {{ $client->lastName }} </a> {{ $client->propertyName }}&nbsp;</li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1"></div>
+    </div>
 @endsection
