@@ -26,17 +26,7 @@ class ClientRequest extends FormRequest
         return [
             'propertyName' => 'required',
             'todaysDate' => 'required',
-            'firstName' => 'required',
-            'lastName' => 'required',
-            'contactEmail' => 'required',
-            'contactPhone' => 'required',
             'groupName' => 'required',
-            'address1' => 'required',
-            'city' => 'required',
-            'state' => 'required',
-            'zip' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
             'numDays' => 'required',
             'groupStatus' => 'required'
         ];
