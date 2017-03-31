@@ -45,7 +45,7 @@
 
 
         <input id="firstName" type="text" class="form-control" name="firstName"
-               value="{{ old('firstName') }}" required autofocus>
+               value="{{ old('firstName') }}" autofocus>
 
         @if ($errors->has('firstName'))
             <span class="help-block">
@@ -58,7 +58,7 @@
 
 
         <input id="lastName" type="text" class="form-control" name="lastName"
-               value="{{ old('lastName') }}" required autofocus>
+               value="{{ old('lastName') }}" autofocus>
 
         @if ($errors->has('lastName'))
             <span class="help-block">
