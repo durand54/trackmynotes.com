@@ -20,6 +20,27 @@ Route::get(/**
 
 Auth::routes();
 
+/*Route::get('clients/search/{query}', function($query) {
+    return TrackMyNotes\Client::search($query)->get();
+});*/
+
 Route::get('/home', 'HomeController@index');
 Route::resource('clients','ClientController');
+Route::get('clients/{client}','ClientController@edit');
+Route::patch('client/{client}','ClientController@update');
 Route::post('/clients','ClientController@store');
+Route::get('clients/search/{query}', 'ClientController@search');
+
+Route::get('imports','CSVImportController@index');
+Route::post('importExcel', 'CSVImportController@importExcel');
+Route::get('importExport', 'CSVImportController@importExport');
+
+Route::resource('note','NoteController');
+Route::post('/client/{client}/note','NoteController@store');
+/*
+
+Route::resource('cvsimport','CSVImportController');
+Route::post('importExcel', 'CSVImportController@importExcel');
+Route::get('/cvsimport/importExport', 'CSVImportController@importExport');
+Route::get('downloadExcel/{type}', 'CSVImportController@downloadExcel');
+*/

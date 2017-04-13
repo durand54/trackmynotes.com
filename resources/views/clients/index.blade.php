@@ -26,7 +26,7 @@
         <div class="col-md-8">
             <ul style="list-style: none;">
                 @foreach($clients as $client)
-                    <li><a href="" class="clients">{{ $client->firstName }} {{ $client->lastName }} </a> {{ $client->propertyName }}&nbsp;</li>
+                    <li><a href="clients/{{ $client->id }}" class="clients">{{ $client->groupname }}</a> Contact: {{ $client->firstname }} {{ $client->lastname }} Phone: {{ $client->contactphone }} Email: {{ $client->contactemail }}&nbsp;</li>
                 @endforeach
             </ul>
         </div>

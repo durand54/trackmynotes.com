@@ -13,6 +13,10 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/libs.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ mix('css/libs/bootstrap-switch.css') }}" rel="stylesheet">
+
 
     <!-- Scripts -->
     <script>
@@ -91,11 +95,40 @@
 
         @yield('content')
     </div>
-
+    <footer>
+        <p style="float: right; margin-right: 10px;">© 2017 TrackMyNotes powered by <img src="/images/Algolia_logo_bg-white.jpg" title="Algolia" height="20px"/></p>
+    </footer>
     <!-- Scripts -->
+    <!--<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/libs.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="{{ mix('js/libs/bootstrap-switch.min.js') }}"></script>-->
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/libs.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+
+    <script>
+        $('#completed').bootstrapSwitch();
+        var y=0;
+        $("#completed").val(y);
+        $('#completed').on('switchChange.bootstrapSwitch', function (event, state) {
+
+            var x=1;//$(this).data('on-text');
+            var y=0;//$(this).data('off-text');
+            if($("#completed").is(':checked')) {
+                $("#completed").val(x);
+            } else {
+                $("#completed").val(y);
+            }
+        });
+        //# sourceURL=pen.js
+    </script>
     @include('flash')
+
 
 
 </body>

@@ -1,6 +1,11 @@
 {
   "/js/app.js": "/js/app.870f2b9e11a07df53099.js",
-  "/css/app.css": "/css/app.badb898b7d1db29bcfce.css",
+  "/css/app.css": "/css/app.daa71c543cf1d36d031f.css",
+  "/js/libs/bootstrap-switch.min.js": "/js/libs/bootstrap-switch.min.7b32d802066fcc983c2d.js",
   "/js/libs.js": "/js/libs.fe72c3de01dc1d5c03d3.js",
-  "/css/libs.css": "/css/libs.d8cc26070373f41241f37ce5a9c9d885.css"
+  "/js/libs/main.js": "/js/libs/main.0e2e6a54243c86b35bf7.js",
+  "/js/libs/highlight.js": "/js/libs/highlight.54b9907d0f68b4e8bedc.js",
+  "/css/libs.css": "/css/libs.d8cc26070373f41241f37ce5a9c9d885.css",
+  "/css/libs/bootstrap-switch.css": "/css/libs/bootstrap-switch.bd7a6aa6c77cc979b4762ea05139feca.css",
+  "/css/libs/main.css": "/css/libs/main.9140bf0a0fac22c579ad83d0e5acf348.css"
 }

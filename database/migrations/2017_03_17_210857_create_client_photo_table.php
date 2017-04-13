@@ -17,7 +17,6 @@ class CreateClientPhotoTable extends Migration
             $table->increments('id');
 
             $table->integer('client_id')->unsigned();
-            $table->foreign('client_id')->references('id')->on('client')->onDelete('cascade');
 
             $table->string('groupPhotoPath');
             $table->timestamps();

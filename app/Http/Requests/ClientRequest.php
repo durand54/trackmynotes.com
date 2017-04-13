@@ -24,11 +24,11 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            'propertyName' => 'required',
-            'todaysDate' => 'required',
-            'groupName' => 'required',
-            'numDays' => 'required',
-            'groupStatus' => 'required'
+            'propertyname' => 'required',
+            'todaysdate' => 'required',
+            'groupname' => 'required',
+            'numdays' => 'required',
+            'groupstatus' => 'required'
         ];
     }
 }

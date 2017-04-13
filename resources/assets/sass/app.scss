@@ -91,3 +91,50 @@ a.clients{
 .clients a:active {
   color: #FFFFFF;
 }
+
+.card-notes{
+  text-align: left;
+  display: block;
+  list-style: none;
+  font-size: 22px;
+  color: #A12821;
+  font-weight: 600;
+}
+
+.card-notes > a {
+  text-align: left;
+  display: block;
+  list-style: none;
+  font-size: 22px;
+  color: #A12821;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+}
+
+.card-btn{
+  background-color:#A12821; border-radius: 6px;color: #FFFFFF;font-weight: 600;
+}
+.card-btn-complete{
+  background-color:#46BF37; border-radius: 6px;color: #FFFFFF;font-weight: 600; float: right;margin-right: 10px;
+}
+.card-btn-incomplete{
+  background-color:#A12821; border-radius: 6px;color: #FFFFFF;font-weight: 600; float: right; margin-right: 10px;
+}
+.card-btn >a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  font-size: 16px;
+}
+.card-btn-right{
+  background-color:#A12821; border-radius: 6px;color: #FFFFFF;font-weight: 600;float: right;
+}
+.card-btn-right >a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  font-size: 18px;
+}

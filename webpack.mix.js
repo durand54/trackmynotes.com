@@ -13,6 +13,12 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/libs/sweetalert-dev.js','public/js/libs.js')
+    .js('resources/assets/js/libs/bootstrap-switch.min.js', 'public/js/libs')
+    .js('resources/assets/js/libs/main.js', 'public/js/libs')
+    .js('resources/assets/js/libs/highlight.js', 'public/js/libs')
    .sass('resources/assets/sass/app.scss', 'public/css')
     .styles('resources/assets/css/libs/sweetalert.css', 'public/css/libs.css')
+    .styles('resources/assets/css/libs/bootstrap-switch.css', 'public/css/libs/bootstrap-switch.css')
+    .styles('resources/assets/css/libs/main.css', 'public/css/libs/main.css')
+    .styles('resources/assets/css/libs/highlight.css', 'public/css/libs/main.css')
     .version();
