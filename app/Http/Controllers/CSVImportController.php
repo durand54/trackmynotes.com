@@ -66,17 +66,18 @@ class CSVImportController extends Controller
                 $results = $reader->get()->toArray();
                 forEach ( $results as $row)
                 {
-                    echo("<br><br>");
-                    var_dump($row);
+                    //echo("<br><br>");
+                    //var_dump($row);
                     $client = array_map('trim', $row);
                     Client::create($client);
-                    echo("<br>SUCCESS!!!<br>");
+                    //echo("<br>SUCCESS!!!<br>");
 
                 }
 
 
         });
-
+            flash()->success('Success!','Your Excel document has been successfully uploaded!');
+            return redirect()->back();
         }
 
         //return back()->with('error','Please Check your file, Something is wrong there.');
