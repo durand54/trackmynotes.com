@@ -21,6 +21,7 @@ class ClientType
         '7'=>'Group is hot!',
         '8'=>'Group decision coming',
         '9'=>'Group turned down',
+        '10'=>'Group has not been contacted',
     );
 
     /**
