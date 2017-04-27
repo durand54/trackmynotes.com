@@ -10,7 +10,8 @@ class ClientController extends Controller
 {
     public function index()
     {
-        $clients = Client::orderBy('groupname')->get();
+        $clients = Client::orderBy('groupname')->paginate(15);
+//        $clients = Client::where('groupname','LIKE','W%')->orderBy('groupname')->paginate(15);
         //return dd($clients);
         return view('clients.index', compact('clients'));
     }
@@ -50,6 +51,13 @@ class ClientController extends Controller
     {
         $clients = Client::search($query)->get();
 //        dd($clients);
+        return view('clients.search', compact('clients'));
+    }
+
+    public function separate($query)
+    {
+        $cap = $query;
+        $clients = Client::where('groupname','LIKE',$cap.'%')->orderBy('groupname')->paginate(15);
         return view('clients.search', compact('clients'));
     }
 

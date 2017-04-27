@@ -29,6 +29,7 @@ Route::resource('clients','ClientController');
 Route::get('clients/{client}','ClientController@edit');
 Route::patch('client/{client}','ClientController@update');
 Route::post('/clients','ClientController@store');
+Route::get('clients/order/{query}', 'ClientController@separate');
 Route::get('clients/search/{query}', 'ClientController@search');
 
 Route::get('imports','CSVImportController@index');
