@@ -49,7 +49,7 @@ class ClientController extends Controller
 
     public function search($query)
     {
-        $clients = Client::search($query)->get();
+        $clients = Client::search($query)->get()->paginate(15);
 //        dd($clients);
         return view('clients.search', compact('clients'));
     }
