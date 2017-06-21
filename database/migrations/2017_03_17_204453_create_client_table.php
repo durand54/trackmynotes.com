@@ -46,6 +46,7 @@ class CreateClientTable extends Migration
             $table->string('todaysdate');
             $table->text('groupnotes')->nullable();
             $table->string('groupstatus');
+            $table->string('eventweek');
             $table->timestamps();
         });
     }

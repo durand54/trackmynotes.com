@@ -3,6 +3,7 @@
 namespace TrackMyNotes\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TrackMyNotes\Client;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       // return view('home');
+        $clients = Client::orderBy('groupname')->paginate(16);
+//        $clients = Client::where('groupname','LIKE','W%')->orderBy('groupname')->paginate(15);
+        //return dd($clients);
+        return view('clients.index', compact('clients'));
     }
 }

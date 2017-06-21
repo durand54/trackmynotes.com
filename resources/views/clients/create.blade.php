@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 @section('content')
-    <div class="jumbotron" xmlns="http://www.w3.org/1999/html">
+    <div class="jumbotron" xmlns="http://www.w3.org/1999/html" style="padding: 0;">
         <h1>Create A New Client</h1>
     </div>
     <div class="container">

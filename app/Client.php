@@ -19,7 +19,8 @@ class Client extends Model
     protected $fillable = [
         'propertyname' , 'todaysdate' , 'firstname' , 'lastname' , 'title' , 'contactemail' , 'contactphone' , 'contactext' , 'groupname' ,
         'address1' , 'address2' , 'city' , 'state' , 'zip' , 'phone', 'fax' , 'tollfree' , 'email' , 'web' , 'numdays' ,
-        'numcatered' , 'numnotcatered' , 'assignment' , 'numevents' , 'lgstsqft', 'lqstname' , 'groupnotes' , 'groupstatus'
+        'numcatered' , 'numnotcatered' , 'assignment' , 'numevents' , 'lgstsqft', 'lgstname' , 'groupnotes' , 'groupstatus','eventweek',
+        'calldate','bookingdate','archive','systementered'
     ];
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -35,6 +36,14 @@ class Client extends Model
     public function notes()
     {
         return $this->belongsToMany(Note::class);
+    }
+
+    public static function withCallDate($date)
+    {
+        return static::leftJoin(
+            'client_note',
+            'client.id', '=', 'client_note.client_id'
+        );
     }
 
 }

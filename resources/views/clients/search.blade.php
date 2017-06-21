@@ -1,4 +1,4 @@
-
+@inject('eventWeek','TrackMyNotes\Http\Utilities\EventWeek');
 @extends('layouts.app')
 @section('content')
     <div class="container">
@@ -44,19 +44,38 @@
                     </div>
 
                     <div class="panel-body">
-                        <a href="../../clients/order/X" class="btn btn-danger">X</a>
-                        <a href="../../clients/order/Y" class="btn btn-danger">Y</a>
-                        <a href="../../clients/order/Z" class="btn btn-danger">Z</a>
-                        <a href="../../clients/order/1" class="btn btn-danger">1</a>
-                        <a href="../../clients/order/2" class="btn btn-danger">2</a>
-                        <a href="../../clients/order/3" class="btn btn-danger">3</a>
-                        <a href="../../clients/order/4" class="btn btn-danger">4</a>
-                        <a href="../../clients/order/5" class="btn btn-danger">5</a>
-                        <a href="../../clients/order/6" class="btn btn-danger">6</a>
-                        <a href="../../clients/order/7" class="btn btn-danger">7</a>
-                        <a href="../../clients/order/8" class="btn btn-danger">8</a>
-                        <a href="../../clients/order/9" class="btn btn-danger">9</a>
-                        <a href="../../clients/order/0" class="btn btn-danger">0</a>
+                        <div class="col-md-8">
+                            <a href="../../clients/order/X" class="btn btn-danger">X</a>
+                            <a href="../../clients/order/Y" class="btn btn-danger">Y</a>
+                            <a href="../../clients/order/Z" class="btn btn-danger">Z</a>
+                            <a href="../../clients/order/1" class="btn btn-danger">1</a>
+                            <a href="../../clients/order/2" class="btn btn-danger">2</a>
+                            <a href="../../clients/order/3" class="btn btn-danger">3</a>
+                            <a href="../../clients/order/4" class="btn btn-danger">4</a>
+                            <a href="../../clients/order/5" class="btn btn-danger">5</a>
+                            <a href="../../clients/order/6" class="btn btn-danger">6</a>
+                            <a href="../../clients/order/7" class="btn btn-danger">7</a>
+                            <a href="../../clients/order/8" class="btn btn-danger">8</a>
+                            <a href="../../clients/order/9" class="btn btn-danger">9</a>
+                            <a href="../../clients/order/0" class="btn btn-danger">0</a>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-horizontal" role="form" method="POST" action="/eventweek"
+                                  enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
+                                    <label for="eventWeek" class="control-label">Event Week</label>
+                                    <select id="eventWeek" name="eventWeek" class="form-control">
+                                        @foreach($eventWeek::all() as $code => $name)
+                                            <option value="{{ $code }}">{{ $name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,11 +84,17 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <ul style="list-style: none;">
-                @foreach($clients as $client)
-                    <li><a href="../../clients/{{ $client->id }}" class="clients">{{ $client->groupname }}</a> Contact: {{ $client->firstname }} {{ $client->lastname }} Phone: {{ $client->contactphone }} Email: {{ $client->contactemail }}&nbsp;</li>
-                @endforeach
-            </ul>
+            @foreach($clients->chunk(4) as $clientgroup)
+                <div style="margin-bottom: 30px;">
+                    @foreach($clientgroup as $client)
+                        <div class="col-md-3">
+                        @include('clients.client-card-two',compact('client'))
+                        <!--<li><a href="clients/{{ $client->id }}" class="clients">{{ $client->groupname }} {{ $client->id }}</a> Contact: {{ $client->firstname }} {{ $client->lastname }} Phone: {{ $client->contactphone }} Email: {{ $client->contactemail }}&nbsp;</li>-->
+                        </div>
+                    @endforeach
+                </div>
+
+            @endforeach
         </div>
         <div class="col-md-2"></div>
     </div>
