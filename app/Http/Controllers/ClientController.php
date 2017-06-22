@@ -17,7 +17,8 @@ class ClientController extends Controller
 //        $clients = Client::where('groupname','LIKE','W%')->orderBy('groupname')->paginate(15);
         //return dd($clients);
         $today = 'index';
-        return view('clients.index', compact('clients','today'));
+        $yearweek = '';
+        return view('clients.index', compact('clients','today','yearweek'));
     }
 
     public function create()
@@ -72,12 +73,14 @@ class ClientController extends Controller
     public function eventweek()
     {
         $yearweek = Input::get('eventWeek');
+
 //        dd($language);
 //        $yearweek = $request->eventWeek;
+
         $clients = Client::where('eventweek', $yearweek )->paginate(16);
-        dd($clients);
+        //dd($clients);
 //        return redirect()->action('ClientController', compact('clients'));
-        return view('clients.index', compact('clients'));
+        return view('clients.index', compact('clients', 'yearweek'));
     }
 
     public function searchAlpha()
