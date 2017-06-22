@@ -87,7 +87,7 @@
                     </div>
                 </form>
             </div>
-            <a class="rotate-btn" data-card="card-{{ $client->id }}"><i class="fa fa-undo"></i> Click here to rotate back</a>
+            <a class="rotate-btn" data-card="card-{{ $client->id }}"><i class="fa fa-undo"></i></a>
 
         </div>
         <!--/.Back Side-->
