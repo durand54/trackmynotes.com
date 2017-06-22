@@ -74,8 +74,8 @@ class ClientController extends Controller
         $yearweek = Input::get('eventWeek');
 //        dd($language);
 //        $yearweek = $request->eventWeek;
-        $clients = Client::where('eventweek', $yearweek )->orderBy('groupname')->paginate(16);
-        //dd($clients);
+        $clients = Client::where('eventweek', $yearweek )->paginate(16);
+        dd($clients);
 //        return redirect()->action('ClientController', compact('clients'));
         return view('clients.index', compact('clients'));
     }
