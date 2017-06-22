@@ -54,7 +54,7 @@ class ClientController extends Controller
 
     public function search($query)
     {
-        $clients = Client::search($query)->get()->paginate(16);
+        $clients = Client::search($query)->orderBy('groupname')->paginate(16);
 //        dd($clients);
         return view('clients.search', compact('clients'));
     }
@@ -77,7 +77,7 @@ class ClientController extends Controller
         $clients = Client::where('eventweek', $yearweek )->orderBy('groupname')->paginate(16);
         //dd($clients);
 //        return redirect()->action('ClientController', compact('clients'));
-        return view('clients.eventweek', compact('clients'));
+        return view('clients.index', compact('clients'));
     }
 
     public function searchAlpha()
