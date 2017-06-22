@@ -41,7 +41,7 @@
                     <p style="font-weight: 600; margin-top: 5px;">Last Event Week:</p>
                     <p>{{ $client->todaysdate }}</p>
                 <!--Triggering button-->
-                <a class="rotate-btn" data-card="card-{{ $client->id }}"><i class="fa fa-repeat"></i> Click here to rotate</a>
+                <a class="rotate-btn" data-card="card-{{ $client->id }}"><i class="fa fa-repeat"></i></a>
             </div>
         </div>
         <!--/.Front Side-->
