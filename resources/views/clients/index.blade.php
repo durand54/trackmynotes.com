@@ -8,11 +8,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
+       <!-- <div class="col-md-2"></div>
+        <div class="col-md-2">-->
             <!--Card-->
 
-            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+            <!--<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
                 <a class="btn-floating btn-large red">
                     <i class="large material-icons">mode_edit</i>
                 </a>
@@ -23,10 +23,10 @@
                     <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
                     <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
                 </ul>
-            </div>
+            </div>-->
             <!--/.Card-->
-        </div>
-        <div class="col-md-5"></div>
+        <!--</div>
+        <div class="col-md-5"></div>-->
     </div>
     <div class="row">
         <div class="col-md-1"></div>
@@ -35,7 +35,7 @@
                 @foreach($clients->chunk(4) as $clientgroup)
                     <div style="margin-bottom: 30px;">
                         @foreach($clientgroup as $client)
-                            <div class="col-md-3">
+                            <div class="col-sm-12 col-md-3">
                                 @include('clients.client-card',compact('client'))
                             </div>
                         @endforeach
