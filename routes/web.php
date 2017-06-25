@@ -30,6 +30,7 @@ Route::get('/eventweek','ClientController@eventweek');
 Route::get('/searchAlpha','ClientController@searchAlpha');
 Route::get('/clientTypes', 'ClientController@clientTypes');
 Route::get('/clientsHot' , 'ClientController@clientsHot');
+Route::get('/clientsNew' , 'ClientController@clientsNew');
 Route::get('/clientsRecent' , 'ClientController@clientsRecent');
 Route::get('/clientsTodayCalls' , 'ClientController@clientsTodayCalls');
 Route::get('/clientsCalls', 'ClientController@clientsCalls');

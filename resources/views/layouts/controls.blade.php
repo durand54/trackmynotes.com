@@ -6,6 +6,7 @@
 
     <div class="panel-body">
         <a href="clients/create" class="btn btn-primary">Enter New Client</a>
+        <a href="/clientsNew" class="btn btn-outline-danger">New Leads</a>
         <a href="/clientsRecent" class="btn btn-success">Recent</a>
         <a href="/clientsHot" class="btn btn-danger">Hot</a>
         <a href="/clientsTodayCalls" class="btn btn-primary">Today's Calls</a>

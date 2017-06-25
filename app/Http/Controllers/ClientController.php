@@ -13,7 +13,7 @@ class ClientController extends Controller
 {
     public function index()
     {
-        $clients = Client::where('archive',0)->orderBy('groupname')->paginate(16);
+        $clients = Client::where('archive',0)->orderBy('groupname', 'ASC')->orderBy('eventweek', 'DESC')->paginate(16);
 //        $clients = Client::where('groupname','LIKE','W%')->orderBy('groupname')->paginate(15);
         //return dd($clients);
         $today = 'index';
@@ -24,7 +24,8 @@ class ClientController extends Controller
     public function create()
     {
         //flash()->overlay('Welcome Back','');
-        return view('clients.create');
+        $todayDate = Carbon::today();
+        return view('clients.create', compact('todayDate'));
     }
 
     public function edit( $id )
@@ -42,7 +43,7 @@ class ClientController extends Controller
         return redirect()->back();//temporary
     }
 
-    public function update(Client $client, ClientRequest $request)
+    public function update(Client $client, Request $request)
     {
         //$article = Article::findOrFail($id);
 
@@ -104,6 +105,13 @@ class ClientController extends Controller
     {
         $clients = Client::where('groupstatus', 'LIKE', 'Hot'.'%')->orderBy('groupname')->paginate(16);
         $today = 'clientsHot';
+        return view('clients.index', compact('clients','today'));
+    }
+
+    public function clientsNew()
+    {
+        $clients = Client::where('groupstatus', 'LIKE', 'New'. '%')->orderBy('groupname')->paginate(16);
+        $today = 'clientsNew';
         return view('clients.index', compact('clients','today'));
     }
 

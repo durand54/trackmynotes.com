@@ -6,11 +6,15 @@
         <div class="face front">
 
             <!-- Company name-->
-            @if( $client->groupstatus == "Group has not been contacted")
-                <div class="card-up">
-                    @else
-                        <div class="card-up-two">
-                            @endif
+            @if( $client->groupstatus == "New Lead")
+                <div class="card-up-new-lead">
+            @else
+                @if( $client->groupstatus == "Group has not been contacted")
+                    <div class="card-up">
+                @else
+                    <div class="card-up-two">
+                @endif
+            @endif
                 <h3><a href="clients/{{ $client->id }}" class="clients">{{ $client->groupname }}</a></h3>
             </div>
             <!--Content-->
@@ -36,10 +40,16 @@
                         @endif
                     @endif
                 @endif
-                    <p style="font-weight: 600; margin-top: 5px;">Last Event Hotel:</p>
-                    <p>{{ $client->propertyname }}</p>
-                    <p style="font-weight: 600; margin-top: 5px;">Last Event Week:</p>
-                    <p>{{ $client->todaysdate }}</p>
+                    @if( $client->groupstatus == "New Lead")
+                        <p style="font-weight: 600; margin-top: 5px;">{{ $client->groupstatus }}</p>
+                        <p style="font-weight: 600; margin-top: 5px;">{{ $client->todaysdate }}</p>
+                        <p style="font-weight: 600; margin-top: 5px;">{{ $client->city }}, {{ $client->state }}</p>
+                    @else
+                        <p style="font-weight: 600; margin-top: 5px;">Last Event Hotel:</p>
+                        <p>{{ $client->propertyname }}</p>
+                        <p style="font-weight: 600; margin-top: 5px;">Last Event Week:</p>
+                        <p>{{ $client->todaysdate }}</p>
+                    @endif
                 <!--Triggering button-->
                 <a class="rotate-btn" data-card="card-{{ $client->id }}"><i class="fa fa-repeat"></i></a>
             </div>

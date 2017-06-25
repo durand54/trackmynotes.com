@@ -20,7 +20,11 @@
             <hr>
         </div>
         <div class="form-group{{ $errors->has('todaysdate') ? ' has-error' : '' }}">
-            <label for="todaysdate" class="control-label">Last Event Date</label>
+            @if( $client->groupstatus == "New Lead")
+                <label for="todaysdate" class="control-label">Entry Date</label>
+            @else
+                <label for="todaysdate" class="control-label">Last Event Date</label>
+            @endif
             <input placeholder="Selected date" type="text" id="todaysdate" class="form-control disabled" name="todaysdate"
                    value="{{ $client->todaysdate  }}">
         </div>

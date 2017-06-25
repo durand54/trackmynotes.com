@@ -12,25 +12,26 @@ namespace TrackMyNotes\Http\Utilities;
 class ClientType
 {
     protected static $clientTypes = array(
-        '1'=>'Group has not been contacted',
-        '2'=>'LVM',
-        '3'=>'VM',
-        '4'=>'Send',
-        '5'=>'Sent',
-        '6'=>'Hot',
-        '7'=>'Prospect',
-        '8'=>'Cold',
-        '9'=>'Dead',
-        '10'=>'Turned Down',
-        '11'=>'Return Call',
-        '12'=>'Call Date Set',
-        '13'=>'Sent Information',
-        '14'=>'Potential is weak',
-        '15'=>'Potential is strong',
-        '16'=>'No Potential',
-        '17'=>'Group decision coming',
-        '18'=>'Needs to be contacted',
-        '19'=>'Contract sent'
+        '1'=>'New Lead',
+        '2'=>'Group has not been contacted',
+        '3'=>'LVM',
+        '4'=>'VM',
+        '5'=>'Send',
+        '6'=>'Sent',
+        '7'=>'Hot',
+        '8'=>'Prospect',
+        '9'=>'Cold',
+        '10'=>'Dead',
+        '11'=>'Turned Down',
+        '12'=>'Return Call',
+        '13'=>'Call Date Set',
+        '14'=>'Sent Information',
+        '15'=>'Potential is weak',
+        '16'=>'Potential is strong',
+        '17'=>'No Potential',
+        '18'=>'Group decision coming',
+        '19'=>'Needs to be contacted',
+        '20'=>'Contract sent'
     );
 
     /**

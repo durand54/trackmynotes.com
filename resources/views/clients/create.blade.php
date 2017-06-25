@@ -11,7 +11,7 @@
                     <div class="panel-body">
                         <form class="form-horizontal" role="form" method="POST" action="/clients"
                               enctype="multipart/form-data">
-                            @include('clients.form');
+                            @include('clients.newform');
                             <div class="col-md-12">
                                 <div class="form-group">
                             @if( count($errors) > 0 )
