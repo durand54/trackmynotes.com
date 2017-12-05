@@ -88,7 +88,7 @@ class ClientController extends Controller
     {
 
         $alphabet = Input::get('alphabet');
-        $clients = Client::where('groupname','LIKE',$alphabet.'%')->orderBy('groupname')->paginate(16);
+        $clients = Client::where('groupname','LIKE','%'.$alphabet.'%')->orderBy('groupname')->paginate(16);
         $today = 'clientsAlpha';
         return view('clients.index', compact('clients','today'));
     }

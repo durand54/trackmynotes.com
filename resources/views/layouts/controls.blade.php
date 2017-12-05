@@ -16,7 +16,7 @@
     </div>
     <div class="panel-body">
 
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div style="width: 90%;">
                 <form class="form-horizontal" role="form" method="GET" action="/searchAlpha"
                       enctype="multipart/form-data">
@@ -35,7 +35,23 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
+            <div style="width: 90%;">
+                <form class="form-horizontal" role="form" method="GET" action="/searchAlpha"
+                      enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="form-group{{ $errors->has('alphabet') ? ' has-error' : '' }}">
+                        <label for="alphabet" class="control-label">Search Name:</label>
+                        <input id="alphabet" name="alphabet"  type="text" class="form-control"
+                               value="{{ old('alphabet') }}" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3">
             <div style="width: 90%;">
                 <form class="form-horizontal" role="form" method="GET" action="/eventweek"
                       enctype="multipart/form-data">
@@ -54,7 +70,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div style="width: 90%;">
                 <form class="form-horizontal" role="form" method="GET" action="/clientTypes"
                       enctype="multipart/form-data">
