@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="/mdb/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="/mdb/css/mdb.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
